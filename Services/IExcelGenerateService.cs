@@ -11,5 +11,10 @@ namespace ExcelGenerate.Services
     {
 
         Task<FileDownloadDto> GenerateExcel(DataTable dataTable);
+        Task<FileDownloadDto> GenerateExcelCustomize(
+           DataTable dataTable,
+           List<KeyValuePair<string, string>> displayFields,
+           string fileName = "ResultFile",
+           int[] columnWidthArray = null);
     }
 }
